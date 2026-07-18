@@ -1,0 +1,309 @@
+body {
+  min-width: 450px;
+  margin-top: 60px;
+  overflow-x: hidden;
+  background-color: #f2f2f2;
+}
+@media screen and (min-width: 768px) {
+  body {
+    margin-top: 70px;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f2f2f2;
+  z-index: 100;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: 70px;
+  }
+}
+
+.header_inner {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 19px 15px;
+  max-width: 1512px;
+}
+@media screen and (min-width: 768px) {
+  .header_inner {
+    padding: 22px 40px 21px;
+  }
+}
+
+.header_logo img {
+  width: 170px;
+  height: 22px;
+  display: block;
+}
+.header_logo img:hover {
+  opacity: 0.6;
+}
+
+.header_nav {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header_nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 46px;
+  }
+}
+
+.header_link {
+  font-family: "Noto Serif JP", serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+@media screen and (min-width: 768px) {
+  .header_link {
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+  }
+  .header_link:hover {
+    color: #e6c76e;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header_link {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1512px) {
+  .header_link {
+    font-size: 20px;
+  }
+}
+
+.drawer-icon {
+  width: 30px;
+  height: 18px;
+  position: relative;
+  z-index: 51;
+}
+.drawer-icon.is-checked .drawer-icon_bar:nth-of-type(1) {
+  top: 10px;
+  -webkit-transform: rotate(44.89deg);
+          transform: rotate(44.89deg);
+}
+.drawer-icon.is-checked .drawer-icon_bar:nth-of-type(2) {
+  display: none;
+}
+.drawer-icon.is-checked .drawer-icon_bar:nth-of-type(3) {
+  top: 10px;
+  -webkit-transform: rotate(-44.904deg);
+          transform: rotate(-44.904deg);
+}
+@media screen and (min-width: 768px) {
+  .drawer-icon {
+    display: none;
+  }
+}
+
+.drawer-icon_bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: #000;
+  -webkit-transition: top 0.3s linear, -webkit-transform 0.3s linear;
+  transition: top 0.3s linear, -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear, top 0.3s linear;
+  transition: transform 0.3s linear, top 0.3s linear, -webkit-transform 0.3s linear;
+  border-radius: 9999px;
+}
+.drawer-icon_bar:nth-of-type(2) {
+  top: 8px;
+}
+.drawer-icon_bar:nth-of-type(3) {
+  top: 16px;
+}
+
+.drawer-content {
+  width: 270px;
+  height: 100%;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  background-color: #f2f2f2;
+  z-index: 50;
+  padding: 40px 15px;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+.drawer-content.is-checked {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.drawer-content_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+  text-align: right;
+}
+
+.drawer-content_link {
+  color: #000;
+  font-family: "Noto Serif JP", serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.drawer-content_link:hover {
+  color: #e6c76e;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.works_page {
+  padding: 21.1vw 17px 50px 17px;
+  margin: 0 auto;
+  background: url(../img/work_page-background.webp) center center/cover no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .works_page {
+    padding-top: 15vw;
+  }
+}
+
+.work-page_header {
+  text-align: center;
+}
+
+.work-page_title {
+  display: inline-block;
+  font-family: "Noto Serif", serif;
+  color: #fff;
+  font-size: clamp(1.125rem, 0.732rem + 1.96vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .work-page_title {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .work-page_title {
+    margin-bottom: 80px;
+  }
+}
+
+.work-page_image {
+  margin: auto;
+  width: 80vw;
+  max-width: 1000px;
+}
+.work-page_image img {
+  border-radius: 32px;
+}
+
+.work-page_site-link {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.button_site-link {
+  display: inline-block;
+  color: #fff;
+  background-color: #4c5232;
+  border: 1px solid #fefefe;
+  border-radius: 4px;
+  padding: 12px 30px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.button_site-link:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+@media screen and (min-width: 768px) {
+  .button_site-link {
+    font-size: 18px;
+  }
+}
+
+.work-page_content {
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 800px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .work-page_content {
+    font-size: 18px;
+  }
+}
+
+.work-page__archive {
+  margin-top: 80px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .work-page__archive {
+    margin-top: 120px;
+  }
+}
+
+.footer {
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+.footer_inner {
+  color: #333;
+  text-align: center;
+  font-family: "Noto Serif JP", serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.footer-last_text {
+  margin-top: 24px;
+  color: #888;
+}
+@media screen and (min-width: 768px) {
+  .footer-last_text {
+    margin-top: 28px;
+  }
+}
