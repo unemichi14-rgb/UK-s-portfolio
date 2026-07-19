@@ -401,7 +401,7 @@ body {
   overflow: hidden;
 }
 
-.onomichi_swiper {
+.gallery_swiper {
   width: max-content;
   height: auto;
   display: flex;
@@ -479,21 +479,8 @@ body {
   }
 
   to {
-    transform: translateX(calc(-50% - 8px));
+    transform: translateX(calc( var(--move) * -1));
   }
-}
-
-.onomichi_pagination {
-  display: none;
-}
-
-.onomichi_prev,
-.onomichi_next {
-  display: none;
-}
-
-.onomichi_scrollbar {
-  display: none;
 }
 
 .work_content {
