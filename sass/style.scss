@@ -407,6 +407,10 @@ body {
   display: flex;
   gap: 16px;
   animation: scroll-left 20s infinite linear 0.5s both;
+
+    will-change: transform;
+  transform: translate3d(0,0,0);
+  backface-visibility:hidden;
 }
 
 .photo_slide {
