@@ -421,8 +421,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 16px;
-  -webkit-animation: scroll-left 20s infinite linear 0.5s both;
-          animation: scroll-left 20s infinite linear 0.5s both;
+  -webkit-animation: scroll-left 200s infinite linear  both;
+          animation: scroll-left 200s infinite linear  both;
 }
 
 .photo_slide {
