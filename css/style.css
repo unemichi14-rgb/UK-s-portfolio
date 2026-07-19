@@ -423,6 +423,11 @@ body {
   gap: 16px;
   -webkit-animation: scroll-left 20s infinite linear 0.5s both;
           animation: scroll-left 20s infinite linear 0.5s both;
+   will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .photo_slide {
