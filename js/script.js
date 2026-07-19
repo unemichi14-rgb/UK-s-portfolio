@@ -26,4 +26,16 @@ jQuery('#js-drawer-content a[href^="#"]').on("click", function (e) {
   jQuery("#js-drawer-content").removeClass("is-checked");
 });
 
+//スライダー実装（safari対策）
+function setGalleryMove() {
+  const track = document.querySelector(".gallery_swiper");
 
+  if (!track) return;
+
+  const move = track.scrollWidth / 2;
+
+  track.style.setProperty("--move", `${move}px`);
+}
+
+window.addEventListener("load", setGalleryMove);
+window.addEventListener("resize",setGalleryMove);
