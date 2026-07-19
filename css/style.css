@@ -412,7 +412,7 @@ body {
   overflow: hidden;
 }
 
-.onomichi_swiper {
+.gallery_swiper {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -421,8 +421,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 16px;
-  -webkit-animation: scroll-left 200s infinite linear  both;
-          animation: scroll-left 200s infinite linear  both;
+  -webkit-animation: scroll-left 20s infinite linear 0.5s both;
+          animation: scroll-left 20s infinite linear 0.5s both;
 }
 
 .photo_slide {
@@ -510,8 +510,8 @@ body {
             transform: translateX(0);
   }
   to {
-    -webkit-transform: translateX(calc(-50% - 8px));
-            transform: translateX(calc(-50% - 8px));
+    -webkit-transform: translateX(calc(var(--move) * -1));
+            transform: translateX(calc(var(--move) * -1));
   }
 }
 
@@ -521,23 +521,10 @@ body {
             transform: translateX(0);
   }
   to {
-    -webkit-transform: translateX(calc(-50% - 8px));
-            transform: translateX(calc(-50% - 8px));
+    -webkit-transform: translateX(calc(var(--move) * -1));
+            transform: translateX(calc(var(--move) * -1));
   }
 }
-.onomichi_pagination {
-  display: none;
-}
-
-.onomichi_prev,
-.onomichi_next {
-  display: none;
-}
-
-.onomichi_scrollbar {
-  display: none;
-}
-
 .work_content {
   margin-top: 30px;
 }
