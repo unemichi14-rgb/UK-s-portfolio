@@ -421,9 +421,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 16px;
-  -webkit-animation: scroll-left 20s infinite linear 0.5s both;
-          animation: scroll-left 20s infinite linear 0.5s both;
-   will-change: transform;
+  will-change: transform;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
@@ -509,27 +507,6 @@ body {
   color: #e6c76e;
 }
 
-@-webkit-keyframes scroll-left {
-  from {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  to {
-    -webkit-transform: translateX(calc(var(--move) * -1));
-            transform: translateX(calc(var(--move) * -1));
-  }
-}
-
-@keyframes scroll-left {
-  from {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  to {
-    -webkit-transform: translateX(calc(var(--move) * -1));
-            transform: translateX(calc(var(--move) * -1));
-  }
-}
 .work_content {
   margin-top: 30px;
 }
