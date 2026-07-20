@@ -219,6 +219,12 @@ body {
   }
 }
 
+@media screen and (min-width: 600px) {
+  .pc-br {
+    display: none;
+  }
+}
+
 .work-page_image {
   margin: auto;
   width: 80vw;
