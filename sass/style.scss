@@ -20,12 +20,11 @@ $breakpoints: (
   }
 }
 
-// * {
-//   outline: 2px solid blue;
-// }
+* {
+  outline: 2px solid blue;
+}
 
 body {
-  min-width: 450px;
   margin-top: 60px;
   overflow-x: hidden;
   background-color: $color-base;
@@ -197,20 +196,12 @@ body {
   padding-right: 15px;
   margin-bottom: 96px;
   max-width: 1720px;
+  position: relative;
 
   @include mq(pc) {
     padding-left: 40px;
     padding-right: 40px;
     margin-bottom: 160px;
-  }
-}
-
-.mv_inner {
-  flex-direction: row-reverse;
-  align-items: center;
-  position: relative;
-
-  @include mq(pc) {
   }
 }
 
@@ -225,7 +216,7 @@ body {
   }
 }
 
-.mv_video_tape {
+.mv-video_tape {
   width: 100%;
   height: 100%;
   object-fit: cover;
