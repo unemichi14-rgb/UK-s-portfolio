@@ -1,5 +1,8 @@
+/* * {
+  outline: 2px solid blue;
+} */
+
 body {
-  min-width: 450px;
   margin-top: 60px;
   overflow-x: hidden;
   background-color: #f2f2f2;
@@ -191,6 +194,7 @@ body {
   padding-right: 15px;
   margin-bottom: 96px;
   max-width: 1720px;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .mv {
@@ -200,16 +204,6 @@ body {
   }
 }
 
-.mv_inner {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-}
 .mv_video {
   overflow: hidden;
   height: 414px;
@@ -222,7 +216,7 @@ body {
   }
 }
 
-.mv_video_tape {
+.mv-video_tape {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
