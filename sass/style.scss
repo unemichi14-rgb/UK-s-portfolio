@@ -406,9 +406,9 @@ body {
   height: auto;
   display: flex;
   gap: 16px;
-  animation: scroll-left 20s infinite linear 0.5s both;
 
-    will-change: transform;
+//safari対策
+  will-change: transform;
   transform: translate3d(0,0,0);
   backface-visibility:hidden;
 }
@@ -474,16 +474,6 @@ body {
   font-weight: 700;
   &:hover {
     color: #e6c76e;
-  }
-}
-
-@keyframes scroll-left {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(calc( var(--move) * -1));
   }
 }
 
