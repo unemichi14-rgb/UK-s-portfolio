@@ -26,16 +26,50 @@ jQuery('#js-drawer-content a[href^="#"]').on("click", function (e) {
   jQuery("#js-drawer-content").removeClass("is-checked");
 });
 
-//スライダー実装（safari対策）
-function setGalleryMove() {
-  const track = document.querySelector(".gallery_swiper");
+//無限スライダー実装（safari対策）
+window.addEventListener("load", () => {
+  const gallery = document.querySelector(".gallery_swiper");
 
-  if (!track) return;
+  if (!gallery) return;
 
-  const move = track.scrollWidth / 2;
+  //速度（px/frame）
+  const SPEED = 1;
 
-  track.style.setProperty("--move", `${move}px`);
-}
+  //1セット分の枚数
+  const itemConst = gallery.children.length / 2;
 
-window.addEventListener("load", setGalleryMove);
-window.addEventListener("resize",setGalleryMove);
+  //1セット分の横幅
+  let move = 0;
+
+  function calcMove() {
+    move = 0;
+
+    for (let i = 0; i < itemConst; i++) {
+      move += gallery.children[i].offsetWidth;
+    }
+
+    //gap分を追加
+    move += (itemConst - 1) * 16;
+  }
+
+  calcMove();
+
+  let x = 0;
+
+  function animate() {
+    x -= SPEED;
+    if (Math.abs(x) >= move) {
+      x = 0;
+    }
+
+    gallery.style.transform = `translate3d(${x}px,0,0)`;
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  window.addEventListener("resize", () => {
+    calcMove();
+  });
+});
